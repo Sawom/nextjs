@@ -6,6 +6,11 @@ export const getPost = async () => {
   return data;
 };
 
+export const metadata = {
+  title: "all posts | next js",
+  description: "try to learn next js",
+};
+
 const Posts = async () => {
   const posts = await getPost();
 
