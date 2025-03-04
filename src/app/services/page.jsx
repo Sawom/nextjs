@@ -1,4 +1,10 @@
 import Link from "next/link";
+
+export const metadata = {
+  title: "all services",
+  description: "loading all data",
+};
+
 // dynamic route
 const ServicesPage = () => {
   const data = [
@@ -49,7 +55,7 @@ const ServicesPage = () => {
       {/* data map kore link e add korlam */}
       {data.map((data) => {
         return (
-          <div>
+          <div key={data._id}>
             <Link href={`/services/${data._id}`}>{data.name}</Link>
           </div>
         );
