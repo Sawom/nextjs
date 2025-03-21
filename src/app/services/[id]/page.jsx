@@ -1,4 +1,3 @@
-// import { useRouter } from "next/router";
 export default function ServiceDetailsPage({ params }) {
   [
     {
@@ -200,7 +199,7 @@ export default function ServiceDetailsPage({ params }) {
         <div className="flex items-center">
           <div className="max-w-[400px] space-y-4">
             <p>id: {id} </p>
-            <p>title: {singleData.title}</p>
+            <p>title: {title}</p>
           </div>
         </div>
       </div>
