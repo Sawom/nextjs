@@ -24,7 +24,21 @@ const Meals = () => {
 
   return (
     <div>
-      <p>{JSON.stringify(meals)}</p>
+      <input style={{border: "2px solid black"}}
+        className="text-black "
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <div className="grid grid-cols-4 gap-5">
+        {meals?.map((singleMeal) => {
+          return (
+            <div>
+              <p className="text-2xl font-bold">{singleMeal?.strMeal}</p>
+              <p>{singleMeal?.strInstructions}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
